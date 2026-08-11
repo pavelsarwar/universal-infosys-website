@@ -1,0 +1,18 @@
+const header=document.querySelector('.site-header');
+const menuToggle=document.getElementById('menuToggle');
+const nav=document.getElementById('mainNav');
+const backTop=document.getElementById('backTop');
+const preloader=document.getElementById('preloader');
+window.addEventListener('load',()=>setTimeout(()=>preloader.classList.add('hide'),250));
+const onScroll=()=>{header.classList.toggle('scrolled',window.scrollY>20);backTop.classList.toggle('show',window.scrollY>500)};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',open)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}));
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.13});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+let counted=false;
+const stats=document.querySelector('.stats-strip');
+const countObserver=new IntersectionObserver(entries=>{if(entries[0].isIntersecting&&!counted){counted=true;document.querySelectorAll('[data-count]').forEach(el=>{const target=+el.dataset.count,suffix=el.dataset.suffix||'';let start=0;const duration=1100,startTime=performance.now();const tick=now=>{const p=Math.min((now-startTime)/duration,1);const val=Math.floor(target*(1-Math.pow(1-p,3)));el.textContent=val+suffix;if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)});}}, {threshold:.35});
+countObserver.observe(stats);
