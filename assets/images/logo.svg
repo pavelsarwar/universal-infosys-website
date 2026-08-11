@@ -1,1 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44" role="img" aria-label="Universal Infosys"><circle cx="22" cy="22" r="20" fill="#FFD245"/><circle cx="30" cy="14" r="13" fill="#FF8718" opacity=".9"/><circle cx="32" cy="32" r="8" fill="#fff" stroke="#001C68" stroke-width="3"/><text x="52" y="20" fill="#fff" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1">UNIVERSAL</text><text x="52" y="36" fill="#FFD245" font-family="Arial,sans-serif" font-size="16" font-weight="800" letter-spacing="1">INFOSYS</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="128" viewBox="0 0 420 128" role="img" aria-labelledby="title desc">
+  <title id="title">Universal Infosys</title>
+  <desc id="desc">Universal Infosys blue technology mark with black wordmark</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10BFF2"/>
+      <stop offset="0.45" stop-color="#078DD4"/>
+      <stop offset="1" stop-color="#0756A8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B74C8"/>
+      <stop offset="1" stop-color="#034C9D"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00AEEA"/>
+      <stop offset="1" stop-color="#0663B8"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(8 4)">
+    <path fill="url(#g1)" d="M50 10C24 30 12 55 17 79c6 31 33 43 57 44-16-7-30-20-31-37-1-18 9-31 29-39-12-4-21-7-30-5 9-15 22-26 38-32-12-2-21-2-30 0z"/>
+    <path fill="url(#g2)" d="M82 5c23 16 36 33 38 51 2 18-7 34-27 48 10-18 10-34 2-47-7-12-18-21-32-27 10-5 20-6 31-2-2-9-6-16-12-23z"/>
+    <path fill="url(#g3)" d="M76 49c16 7 25 17 27 29 2 13-4 24-19 35 6-12 6-22 1-30-5-8-14-13-27-16 5-8 11-14 18-18z"/>
+    <path fill="#0876C9" opacity=".9" d="M31 86c8 13 21 24 40 32-25-1-44-10-54-28-9-16-9-35 0-53-4 20 1 36 14 49z"/>
+  </g>
+
+  <g fill="#111111" font-family="Arial, Helvetica, sans-serif" font-weight="800">
+    <text x="142" y="54" font-size="42" letter-spacing="-1.2">Universal</text>
+    <text x="142" y="101" font-size="42" letter-spacing="-1.2">Infosys</text>
+  </g>
+</svg>
